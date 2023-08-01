@@ -23,8 +23,8 @@ const ExTr = () => {
     <section className="extrSection">
       <div className="extrHeader">
         <div className="extrHeader__left">
-          <p>Balance : $</p>
-          <span>{calcBalance()}</span>
+          <p>Balance : $ </p>
+          <span>{calcBalance().toLocaleString()}</span>
         </div>
         <button
           onClick={() => {
@@ -44,6 +44,7 @@ const ExTr = () => {
           }}
           type="number"
           placeholder="Amount"
+          name="currency"
         />
         <input
           value={descreptionInput}
@@ -78,11 +79,11 @@ const ExTr = () => {
       <div className="extrShow">
         <div className="extrShow_expense">
           <p>Expense</p>
-          <p>${Math.abs(calcExpense())}</p>
+          <p>${Math.abs(calcExpense()).toLocaleString()}</p>
         </div>
         <div className="extrShow_income">
           <p>Income</p>
-          <p>${calcIncome()}</p>
+          <p>${calcIncome().toLocaleString()}</p>
         </div>
       </div>
     </section>

@@ -25,26 +25,24 @@ export const useBalanceAction = () => {
   const balance = useBalance();
 
   const calcBalance = () =>
-    balance.map((obj) => obj.amount).reduce((total, x) => total + x,0);
+    balance.map((obj) => obj.amount).reduce((total, x) => total + x, 0);
 
   const calcIncome = () =>
     balance
       .map((obj) => (obj.amount > 0 ? obj.amount : 0))
-      .reduce((total=0, x) => total + x,0);
+      .reduce((total = 0, x) => total + x, 0);
 
   const calcExpense = () =>
     balance
       .map((obj) => (obj.amount < 0 ? obj.amount : 0))
-      .reduce((total=0, x) => total + x,0);
+      .reduce((total = 0, x) => total + x, 0);
 
   const showHistory = (searchStr) =>
     searchStr === ""
       ? balance
       : balance.filter((obj) => obj.description.includes(searchStr));
 
-  const addBalance = (newbal) => {
-    setBalance([...balance, newbal]);
-  };
+  const addBalance = (newbal) => setBalance([...balance, newbal]);
 
   return { calcBalance, calcIncome, calcExpense, showHistory, addBalance };
 };
