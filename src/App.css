@@ -1,0 +1,185 @@
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+body {
+  background: #f6f7f9;
+}
+
+.headerSection {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-size: 3rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* ExTr */
+
+.extrSection {
+  width: 49%;
+  background: #fff;
+  padding:15px 30px;
+  border-radius: 10px;
+}
+
+.extrHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.extrHeader__left {
+  display: flex;
+  font-size: 3rem;
+  font-weight: 1000;
+  align-items: center;
+}
+
+button {
+  border: 0;
+  outline: none;
+  background: #000;
+  color: #fff;
+  padding: 2px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.extrAdd {
+  padding: 20px 10px;
+  border: 2px solid #f6f7f9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+.extrAdd--hidden {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+}
+
+
+input[type="text"],input[type="number"] {
+  padding: 7px 15px;
+  outline: none;
+  font-size: 1.7rem;
+}
+
+.extrAdd_radio {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
+
+.extrAdd_radio > div {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+
+.extrShow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.extrShow_income , .extrShow_expense {
+  width: 47%;
+  border: 2px solid #f6f7f9 ;
+  border-radius: 5px;
+  padding:4px 20px;
+  font-size: 2.5rem;
+}
+
+.extrShow_expense :last-child {
+  color: red;
+  font-size: 3rem;
+}
+
+.extrShow_income :last-child {
+  color: green;
+  font-size: 3rem;
+}
+
+/* History */
+
+.historySection {
+  width: 49%;
+  background: #fff;
+  padding:15px 30px;
+  border-radius: 10px;
+}
+
+.historySection__history {
+  height: 340px;
+  overflow: auto;
+  padding-right: 10px;
+  margin-top: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #111827;
+}
+
+.historySection > input {
+  border: 0;
+  outline: none;
+  background: #f6f7f9;
+  padding: 3px 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.7rem;
+}
+
+.historyElement {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px ;
+  border: 1.5px solid #f6f7f9;
+  padding: 2px 15px;
+  border-radius: 4px;
+}
+
+.expenseHistory {
+  border-left: 5px solid red;
+}
+
+.incomeHistory {
+  border-left: 5px solid green;
+}
